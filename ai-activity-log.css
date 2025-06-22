@@ -1,0 +1,187 @@
+/* Inherits base styles from dashboard.css */
+
+.main-content-log {
+    flex-grow: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Override .main-header for this page */
+.main-content-log .main-header {
+    grid-area: unset;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-grey);
+}
+.main-header .header-left h1 {
+    font-size: 28px;
+    margin: 0;
+}
+.main-header .header-left p {
+    color: var(--text-light);
+    margin: 4px 0 0 0;
+}
+
+
+/* Log Controls */
+.log-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.search-bar {
+    position: relative;
+    width: 400px;
+}
+.search-bar i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+}
+.search-bar input {
+    width: 100%;
+    padding: 12px 16px 12px 48px;
+    border-radius: 8px;
+    border: 1px solid var(--border-grey);
+    background-color: white;
+    font-size: 14px;
+}
+
+.filter-buttons .filter-btn {
+    background-color: white;
+    border: 1px solid var(--border-grey);
+    padding: 10px 20px;
+    margin-left: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.filter-buttons .filter-btn.active {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+/* Log Summary */
+.log-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding-bottom: 24px;
+}
+
+.summary-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-blue);
+}
+.summary-card.warning { border-color: #FFC107; }
+.summary-card.executed { border-color: #34A853; }
+.summary-card.error { border-color: #FF3B30; }
+
+
+.summary-card h2 {
+    font-size: 36px;
+    margin: 0 0 8px 0;
+    color: var(--primary-blue);
+}
+.summary-card.warning h2 { color: #FFC107; }
+.summary-card.executed h2 { color: #34A853; }
+.summary-card.error h2 { color: #FF3B30; }
+
+.summary-card p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Log Table */
+.log-table-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    flex-grow: 1;
+}
+
+.log-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.log-table th, .log-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-grey);
+}
+
+.log-table thead th {
+    font-size: 12px;
+    color: var(--text-light);
+    text-transform: uppercase;
+}
+
+.log-table tbody td {
+    vertical-align: top;
+    font-size: 14px;
+}
+.log-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.log-tag {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+.log-tag.suggestion { background-color: #E6F2FF; color: #0A7BFF; }
+.log-tag.warning { background-color: #FFF8E6; color: #FFC107; }
+.log-tag.execution { background-color: #F0F3F6; color: #6D7585; }
+.log-tag.tool-change { background-color: #E6E6FA; color: #9370DB; }
+.log-tag.navigation { background-color: #E0F7FA; color: #0097A7; }
+
+
+.log-details {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.log-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.log-status::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.log-status.executed { background-color: #E4F8E4; color: #34A853; }
+.log-status.executed::before { background-color: #34A853; }
+
+.log-status.acknowledged { background-color: #F0F3F6; color: #6D7585; }
+.log-status.acknowledged::before { background-color: #6D7585; }
+
+.log-status.completed { background-color: #E4F8E4; color: #34A853; }
+.log-status.completed::before { background-color: #34A853; }
+
+.log-status.pending { background-color: #FFF8E6; color: #FFC107; }
+.log-status.pending::before { background-color: #FFC107; }
+
+.log-status.active { background-color: #E6F2FF; color: #0A7BFF; }
+.log-status.active::before { background-color: #0A7BFF; } 

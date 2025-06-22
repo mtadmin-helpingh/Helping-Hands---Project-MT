@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedure Builder - Surgical AI Console</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="procedure-builder.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h2>Helping Hands</h2>
+                    <span>SURGICAL AI CONSOLE</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <p class="nav-title">MAIN NAVIGATION</p>
+                <ul>
+                    <li><a href="dashboard.html"><i data-feather="grid"></i> Dashboard</a></li>
+                    <li class="active-parent">
+                        <a href="#"><i data-feather="folder"></i> Procedures</a>
+                        <ul class="submenu">
+                            <li><a href="procedure-control.html">Procedure Control</a></li>
+                            <li class="active"><a href="procedure-builder.html">Procedure Builder</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="ai-activity-log.html"><i data-feather="activity"></i> AI Activity Log</a></li>
+                </ul>
+                <p class="nav-title">CONTROLS</p>
+                <ul>
+                    <li><a href="#"><i data-feather="move"></i> Robot Arms</a></li>
+                    <li><a href="#"><i data-feather="camera"></i> Camera Control</a></li>
+                    <li><a href="#"><i data-feather="scissors"></i> Precision Tools</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="status-item"><span>Robot Arms</span><span class="status-indicator green"></span></div>
+                <div class="status-item"><span>AI Processing</span><span class="status-indicator green"></span></div>
+                <div class="status-item"><span>Network</span><span class="status-indicator green"></span></div>
+                <div class="status-item"><span>Video Feed</span><span class="status-indicator green"></span></div>
+            </div>
+        </aside>
+        <main class="builder-content">
+            <header class="builder-header">
+                <h1>Procedure Builder</h1>
+            </header>
+            <div class="builder-main">
+                <div class="search-card">
+                    <p class="search-title">Search executions</p>
+                    <div class="search-input-wrapper">
+                        <i data-feather="menu"></i>
+                        <input type="text" value="tissues">
+                        <i data-feather="search"></i>
+                    </div>
+                    <div class="search-results">
+                        <p class="results-info">Executions related to <a href="#">tissues</a></p>
+                        <ul>
+                            <li><a href="#">Incıse</a></li>
+                            <li><a href="#">Resect</a></li>
+                            <li><a href="#">Retract</a></li>
+                            <li><a href="#">Dissect</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html> 

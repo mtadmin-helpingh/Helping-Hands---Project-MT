@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Activity Log - Surgical AI Console</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="ai-activity-log.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h2>Helping Hands</h2>
+                    <span>SURGICAL AI CONSOLE</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <p class="nav-title">MAIN NAVIGATION</p>
+                <ul>
+                    <li><a href="dashboard.html"><i data-feather="grid"></i> Dashboard</a></li>
+                    <li>
+                        <a href="#"><i data-feather="folder"></i> Procedures</a>
+                        <ul class="submenu">
+                            <li><a href="procedure-control.html">Procedure Control</a></li>
+                            <li><a href="procedure-builder.html">Procedure Builder</a></li>
+                        </ul>
+                    </li>
+                    <li class="active"><a href="ai-activity-log.html"><i data-feather="activity"></i> AI Activity Log</a></li>
+                </ul>
+                <p class="nav-title">ANALYSIS</p>
+                <ul>
+                    <li><a href="#"><i data-feather="trending-up"></i> Performance</a></li>
+                    <li><a href="#"><i data-feather="file-text"></i> Detailed Logs</a></li>
+                    <li><a href="#"><i data-feather="pie-chart"></i> Reports</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="status-item"><span>Log Processing</span><span class="status-indicator green"></span></div>
+                <div class="status-item"><span>AI Analysis</span><span class="status-indicator green"></span></div>
+                <div class="status-item"><span>Data Sync</span><span class="status-indicator green"></span></div>
+                <div class="status-item"><span>Export Ready</span><span class="status-indicator green"></span></div>
+            </div>
+        </aside>
+        <main class="main-content-log">
+             <header class="main-header">
+                <div class="header-left">
+                    <h1>AI Activity & Feedback Log</h1>
+                    <p>Real-time surgical AI decision tracking • Session: PT-2025-1247</p>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="user-avatar">DA</div>
+                        <div class="user-info">
+                            <span class="user-name">Dr. Sarah Anderson</span>
+                            <span class="user-role">Lead Surgeon • Cardiothoracic</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <section class="log-controls">
+                <div class="search-bar">
+                    <i data-feather="search"></i>
+                    <input type="text" placeholder="Search AI actions, suggestions, warnings...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Suggestions</button>
+                    <button class="filter-btn">Warnings</button>
+                    <button class="filter-btn">Executions</button>
+                    <button class="filter-btn">Errors</button>
+                </div>
+            </section>
+
+            <section class="log-summary">
+                <div class="summary-card">
+                    <h2>47</h2>
+                    <p>SUGGESTIONS</p>
+                </div>
+                <div class="summary-card warning">
+                    <h2>3</h2>
+                    <p>WARNINGS</p>
+                </div>
+                <div class="summary-card executed">
+                    <h2>23</h2>
+                    <p>EXECUTED</p>
+                </div>
+                <div class="summary-card error">
+                    <h2>0</h2>
+                    <p>ERRORS</p>
+                </div>
+            </section>
+
+            <section class="log-table-container">
+                <table class="log-table">
+                    <thead>
+                        <tr>
+                            <th>TIMESTAMP</th>
+                            <th>AI ACTION & DETAILS</th>
+                            <th>CONFIDENCE</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10:23:45</td>
+                            <td>
+                                <span class="log-tag suggestion">SUGGESTION</span>
+                                <p class="log-details"><strong>Optimal incision trajectory calculated</strong><br>Recommended path: 3.2cm from navel, 45° angle, 2.3cm depth. Avoiding major vessels and organ boundaries</p>
+                            </td>
+                            <td>96%</td>
+                            <td><span class="log-status executed">Executed</span></td>
+                        </tr>
+                        <tr>
+                            <td>10:22:31</td>
+                            <td>
+                                <span class="log-tag warning">WARNING</span>
+                                <p class="log-details"><strong>Blood pressure elevation detected</strong><br>Patient vitals show BP increase from 120/80 to 125/82. Recommendation: Monitor closely, consider pause if trending up</p>
+                            </td>
+                            <td>98%</td>
+                            <td><span class="log-status acknowledged">Acknowledged</span></td>
+                        </tr>
+                        <tr>
+                            <td>10:21:18</td>
+                            <td>
+                                <span class="log-tag execution">EXECUTION</span>
+                                <p class="log-details"><strong>Robot arm position adjusted</strong><br>Movement executed: 2.3mm northeast adjustment. New coordinates: X: 23.4, Y: 45.7, Z: 12.4mm</p>
+                            </td>
+                            <td>91%</td>
+                            <td><span class="log-status completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>10:20:52</td>
+                            <td>
+                                <span class="log-tag tool-change">TOOL CHANGE</span>
+                                <p class="log-details"><strong>Recommend switch to cautery tool</strong><br>Analysis suggests cautery more effective for next phase. Tissue preparation for improved visualization</p>
+                            </td>
+                            <td>87%</td>
+                            <td><span class="log-status pending">Pending</span></td>
+                        </tr>
+                         <tr>
+                            <td>10:19:33</td>
+                            <td>
+                                <span class="log-tag navigation">NAVIGATION</span>
+                                <p class="log-details"><strong>Precision mode activated</strong><br>Switched to 0.1mm increment control. Enhanced accuracy for reliable tissue work</p>
+                            </td>
+                            <td>99%</td>
+                            <td><span class="log-status active">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html> 

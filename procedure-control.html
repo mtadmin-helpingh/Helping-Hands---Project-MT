@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedure Control - Surgical AI Console</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="procedure-control.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h2>Helping Hands</h2>
+                    <span>SURGICAL AI CONSOLE</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <p class="nav-title">MAIN NAVIGATION</p>
+                <ul>
+                    <li><a href="dashboard.html"><i data-feather="grid"></i> Dashboard</a></li>
+                    <li class="active-parent">
+                        <a href="#"><i data-feather="folder"></i> Procedures</a>
+                        <ul class="submenu">
+                            <li class="active"><a href="procedure-control.html">Procedure Control <span class="live-badge">LIVE</span></a></li>
+                            <li><a href="procedure-builder.html">Procedure Builder</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="ai-activity-log.html"><i data-feather="activity"></i> AI Activity Log</a></li>
+                </ul>
+                <p class="nav-title">CONTROLS</p>
+                <ul>
+                    <li><a href="#"><i data-feather="move"></i> Robot Arms</a></li>
+                    <li><a href="#"><i data-feather="camera"></i> Camera Control</a></li>
+                    <li><a href="#"><i data-feather="scissors"></i> Precision Tools</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="status-item"><span>Robot Arms</span><span class="status-indicator green"></span></div>
+                <div class="status-item"><span>AI Processing</span><span class="status-indicator green"></span></div>
+                <div class="status-item"><span>Network</span><span class="status-indicator green"></span></div>
+                <div class="status-item"><span>Video Feed</span><span class="status-indicator green"></span></div>
+            </div>
+        </aside>
+        <div class="procedure-content">
+            <header class="procedure-header">
+                <div class="header-info">
+                    <span>PATIENT ID</span><strong>PT-2025-1247</strong>
+                </div>
+                <div class="header-info">
+                    <span>PROCEDURE TYPE</span><strong>Laparoscopic Surgery</strong>
+                </div>
+                <div class="header-info">
+                    <span>LEAD SURGEON</span><strong>Dr. Anderson</strong>
+                </div>
+                <div class="header-info">
+                    <span>ROOM</span><strong>OR-3</strong>
+                </div>
+                <div class="header-timer">
+                    <span>Elapsed Time</span>
+                    <strong class="timer">01:23:45</strong>
+                </div>
+            </header>
+            <main class="procedure-main">
+                <div class="main-feed-area">
+                    <div class="video-feed-card">
+                        <div class="feed-header">
+                            <h4>Primary Surgical Feed - 4K</h4>
+                            <div class="feed-controls">...</div>
+                        </div>
+                        <div class="video-placeholder">
+                            <p>Live Surgical Camera Feed</p>
+                            <span>Resolution: 4K UHD • Frame Rate: 60fps<br>Latency: 12ms • Connection: Encrypted</span>
+                        </div>
+                    </div>
+                    <div class="control-panels">
+                        <div class="control-card">
+                            <div class="card-header">
+                                <h5>Robot Arm Control</h5>
+                                <span class="status-tag active">ACTIVE</span>
+                            </div>
+                            <div class="arm-controls">
+                               <div class="control-group">
+                                   <p>Primary Arm Movement</p>
+                                   <div class="d-pad">
+                                       <button><i data-feather="arrow-up-left"></i></button>
+                                       <button><i data-feather="arrow-up"></i></button>
+                                       <button><i data-feather="arrow-up-right"></i></button>
+                                       <button><i data-feather="arrow-left"></i></button>
+                                       <div class="center-indicator"></div>
+                                       <button><i data-feather="arrow-right"></i></button>
+                                       <button><i data-feather="arrow-down-left"></i></button>
+                                       <button><i data-feather="arrow-down"></i></button>
+                                       <button><i data-feather="arrow-down-right"></i></button>
+                                   </div>
+                               </div>
+                               <div class="control-group">
+                                   <p>Vertical Control</p>
+                                   <div class="v-pad">
+                                       <button><i data-feather="arrow-up"></i> Up</button> 
+                                       <button><i data-feather="arrow-down"></i> Down</button>
+                                   </div>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="control-card">
+                            <div class="card-header">
+                                <h5>Tool Control</h5>
+                                <span class="status-tag ready">READY</span>
+                            </div>
+                             <div class="tool-controls">
+                                <div class="control-group">
+                                    <p>Surgical Tools</p>
+                                    <div class="tool-buttons">
+                                        <button class="tool-btn"><i data-feather="scissors"></i> Scissors</button>
+                                        <button class="tool-btn active"><i data-feather="target"></i> Grasper</button>
+                                        <button class="tool-btn"><i data-feather="zap"></i> Cautery</button>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <p>Grasper Control</p>
+                                    <div class="gripper-controls">
+                                        <button>Close</button>
+                                        <button>Open</button>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <p>Rotation Control</p>
+                                    <div class="rotation-controls">
+                                        <button><i data-feather="rotate-ccw"></i> CW</button>
+                                        <button><i data-feather="rotate-cw"></i> CCW</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="emergency-controls-card">
+                        <div class="emergency-header">
+                            <i data-feather="alert-triangle"></i>
+                            <span>Emergency Controls</span>
+                        </div>
+                        <div class="emergency-buttons">
+                            <button class="btn-pause"><i data-feather="pause"></i> PAUSE PROCEDURE</button>
+                            <button class="btn-stop"><i data-feather="power"></i> EMERGENCY STOP</button>
+                        </div>
+                    </div>
+                </div>
+                <aside class="vitals-sidebar">
+                    <div class="vitals-card">
+                        <div class="vitals-header">
+                            <h6>Heart Rate</h6>
+                            <span class="status-indicator green"></span>
+                        </div>
+                        <div class="vitals-reading">
+                            <strong>72</strong><span>bpm</span>
+                        </div>
+                        <p class="vitals-status">&rarr; Stable • Normal Range</p>
+                    </div>
+                    <div class="vitals-card">
+                         <div class="vitals-header">
+                            <h6>Blood Pressure</h6>
+                            <span class="status-indicator orange"></span>
+                        </div>
+                        <div class="vitals-reading">
+                            <strong>125/82</strong><span>mmHg</span>
+                        </div>
+                        <p class="vitals-status">&uarr; Elevated • Monitor closely</p>
+                    </div>
+                    <div class="vitals-card">
+                         <div class="vitals-header">
+                            <h6>Oxygen Saturation</h6>
+                            <span class="status-indicator green"></span>
+                        </div>
+                        <div class="vitals-reading">
+                            <strong>98</strong><span>%</span>
+                        </div>
+                        <p class="vitals-status">&rarr; Excellent • Optimal levels</p>
+                    </div>
+                    <div class="ai-assistant-card">
+                        <div class="card-header">
+                             <h6>Surgical AI Assistant</h6>
+                             <div class="ai-status"><span>94%</span></div>
+                        </div>
+                        <p>Real-time analysis active</p>
+                        <div class="ai-suggestion">
+                            <p><strong>PRIORITY SUGGESTION</strong><span>96% confidence</span></p>
+                            <p>Optimal incision point identified: 3.2cm from navel at 45° angle, depth 2.1cm</p>
+                            <button class="btn-execute">Execute</button>
+                            <button class="btn-review">Review</button>
+                        </div>
+                        <div class="ai-alert">
+                             <div class="alert-header">
+                                <strong>SAFETY ALERT</strong>
+                                <span>98% confidence</span>
+                            </div>
+                            <p><strong>Elevated blood pressure detected</strong><br>Consider pausing for patient stabilization</p>
+                            <div class="alert-actions">
+                                <button class="btn-acknowledge">Acknowledge</button>
+                                <button class="btn-dismiss">Dismiss</button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </main>
+        </div>
+    </div>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html> 

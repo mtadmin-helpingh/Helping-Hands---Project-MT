@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surgical Control Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h2>Helping Hands</h2>
+                    <span>SURGICAL AI CONSOLE</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <p class="nav-title">MAIN NAVIGATION</p>
+                <ul>
+                    <li class="active"><a href="dashboard.html"><i data-feather="grid"></i> Dashboard</a></li>
+                    <li>
+                        <a href="#"><i data-feather="folder"></i> Procedures</a>
+                        <ul class="submenu">
+                            <li><a href="procedure-control.html">Procedure Control</a></li>
+                            <li><a href="procedure-builder.html">Procedure Builder</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="ai-activity-log.html"><i data-feather="activity"></i> AI Activity Log</a></li>
+                </ul>
+                <p class="nav-title">SYSTEM</p>
+                <ul>
+                    <li><a href="#"><i data-feather="settings"></i> Settings</a></li>
+                    <li><a href="#"><i data-feather="shield"></i> Safety Protocols</a></li>
+                    <li><a href="#"><i data-feather="bar-chart-2"></i> Analytics</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="status-item">
+                    <span>Robot Arms</span>
+                    <span class="status-indicator green"></span>
+                </div>
+                <div class="status-item">
+                    <span>AI Processing</span>
+                    <span class="status-indicator green"></span>
+                </div>
+                <div class="status-item">
+                    <span>Network</span>
+                    <span class="status-indicator green"></span>
+                </div>
+                <div class="status-item">
+                    <span>Sensors</span>
+                    <span class="status-indicator orange"></span>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="btn btn-side">Side</button>
+                    <button class="btn btn-status">System Status</button>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <div class="user-avatar">DA</div>
+                        <div class="user-info">
+                            <span class="user-name">Dr. Sarah Anderson</span>
+                            <span class="user-role">Lead Surgeon • Cardiothoracic</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="dashboard-main">
+                <div class="dashboard-header">
+                    <h1>Surgical Control Dashboard</h1>
+                    <p>Welcome back, Dr. Anderson • Today: June 12, 2025</p>
+                </div>
+
+                <div class="start-procedure-card">
+                    <button class="btn btn-start-procedure"><i data-feather="play-circle"></i> Start New Procedure</button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h2>127</h2>
+                        <p>PROCEDURES COMPLETED</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2 class="text-blue">99.2%</h2>
+                        <p>SUCCESS RATE</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2 class="text-blue">4.8/5</h2>
+                        <p>AI ACCURACY</p>
+                    </div>
+                </div>
+
+                <div class="recent-procedures">
+                    <h3>Recent Procedures</h3>
+                    <div class="procedure-card">
+                        <div class="procedure-details">
+                            <h4>Laparoscopic Cholecystectomy</h4>
+                            <p>Patient: Sarah Johnson (F, 42) • Gallbladder removal</p>
+                            <p>Surgeon: Dr. Anderson • Assistant: Dr. Kim</p>
+                        </div>
+                        <div class="procedure-stats">
+                            <div><span>2h 23m</span><p>DURATION</p></div>
+                            <div><span>June 10</span><p>DATE</p></div>
+                            <div><span>98.7%</span><p>AI CONFIDENCE</p></div>
+                        </div>
+                        <span class="status-tag completed">COMPLETED</span>
+                    </div>
+                    <div class="procedure-card">
+                        <div class="procedure-details">
+                            <h4>Robotic Appendectomy</h4>
+                            <p>Patient: Michael Chen (M, 28) • Emergency appendix removal</p>
+                            <p>Surgeon: Dr. Anderson • Assistant: Dr. Rodriguez</p>
+                        </div>
+                        <div class="procedure-stats">
+                            <div><span>1h 47m</span><p>DURATION</p></div>
+                            <div><span>June 8</span><p>DATE</p></div>
+                            <div><span>99.1%</span><p>AI CONFIDENCE</p></div>
+                        </div>
+                        <span class="status-tag completed">COMPLETED</span>
+                    </div>
+                </div>
+            </section>
+            <aside class="right-sidebar">
+                <div class="system-alerts">
+                    <h4>System Alerts</h4>
+                    <div class="alert-card warning">
+                        <div class="alert-icon"><i data-feather="alert-triangle"></i></div>
+                        <div class="alert-content">
+                            <h5>Sensor Calibration Due</h5>
+                            <p>Arm sensor #3 requires recalibration in 2 days</p>
+                        </div>
+                    </div>
+                    <div class="alert-card info">
+                        <div class="alert-icon"><i data-feather="download-cloud"></i></div>
+                        <div class="alert-content">
+                            <h5>Software Update Available</h5>
+                            <p>AI algorithm v4.2.1 ready for installation</p>
+                        </div>
+                    </div>
+                    <div class="alert-card report">
+                        <div class="alert-icon"><i data-feather="check-square"></i></div>
+                        <div class="alert-content">
+                            <h5>Weekly Report Ready</h5>
+                            <p>Performance analytics for June 5-12 available</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html> 

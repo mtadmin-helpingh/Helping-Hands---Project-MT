@@ -1,0 +1,89 @@
+/* Inherits base styles from dashboard.css */
+
+.builder-content {
+    flex-grow: 1;
+    padding: 24px;
+}
+
+.builder-header {
+    padding-bottom: 24px;
+}
+.builder-header h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.builder-main {
+    display: flex;
+    /* You can add alignment properties here if needed */
+}
+
+.search-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+    width: 350px;
+}
+
+.search-title {
+    font-size: 14px;
+    color: var(--text-light);
+    margin: 0 0 8px 0;
+}
+
+.search-input-wrapper {
+    position: relative;
+    margin-bottom: 24px;
+}
+.search-input-wrapper input {
+    width: 100%;
+    padding: 12px 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border-grey);
+    box-sizing: border-box;
+}
+.search-input-wrapper i:first-of-type {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+}
+.search-input-wrapper i:last-of-type {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+}
+
+.results-info {
+    font-size: 14px;
+    color: var(--text-light);
+    margin: 0 0 16px 0;
+}
+.results-info a {
+    color: var(--primary-blue);
+    text-decoration: underline;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.search-results li {
+    margin-bottom: 8px;
+}
+.search-results li a {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+.search-results li a:hover {
+    background-color: var(--background-grey);
+} 
